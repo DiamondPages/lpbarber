@@ -1,0 +1,49 @@
+@use '../../../app/var'
+
+
+.swiper_container
+    position: relative
+    width: 1024px
+    display: flex
+
+
+.swiper-slide
+
+.swiper-slide img 
+    width: inherit
+    height: inherit
+    
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right 
+    backdrop-filter: blur(1px)
+
+
+.slider-controler .swiper-button-next,
+.slider-controler .swiper-button-prev
+    color: var.$main
+
+
+.swiper-pagination 
+  position: relative
+
+
+  
+.swiper-pagination .swiper-pagination-bullet-active 
+  background: var.$main
+
+
+
+
+@media screen and (max-width: 767px)
+    .swiper_container
+        width: calc(100vw - 32px)
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+    .swiper_container
+        width: calc(100vw - 64px)
+
+@media screen and (min-width: 1025px) and (max-width: 1279px)
+    .swiper_container
+        width: calc(100vw - 64px)

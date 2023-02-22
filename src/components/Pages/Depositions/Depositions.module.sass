@@ -1,0 +1,26 @@
+.depositions
+    display: flex
+    justify-content: center
+    
+.content
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 96px
+    padding: 128px 0
+    padding-bottom: 128px + 96px
+
+
+@media screen and (max-width: 767px)
+    .depositions
+        height: fit-content
+        .content
+            padding: 64px 0px
+            gap: 64px
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+    .depositions
+        height: fit-content
+        .content
+            padding: 64px 0px
+

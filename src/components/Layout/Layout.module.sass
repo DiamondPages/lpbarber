@@ -1,0 +1,39 @@
+.layout
+    width: 1280px
+    @media screen and (max-width: 1279px)
+        // width: 700px
+
+    .background
+        position: absolute
+        z-index: -9
+        left: 0px
+        object-fit: cover
+        width: 100%
+        pointer-events: none
+
+
+    h2
+        font-size: 24px
+        font-weight: 700
+        text-transform: uppercase
+        text-align: center
+
+
+@media screen and (max-width: 767px)
+    .layout
+        width: 100%
+        padding: 0px 16px
+
+
+        .background
+            width: 100vw
+            height: auto
+        h2
+            font-size: 20px !important
+        p
+            font-size: 14px
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+    .layout
+        width: 100%
+        padding: 0px 32px

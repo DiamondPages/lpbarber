@@ -1,0 +1,169 @@
+@use '../../../app/var'
+
+
+.solution
+    display: flex
+    justify-content: center
+    .content
+        padding: 128px 0px
+        display: flex
+        flex-direction: column
+        gap: 128px
+        align-items: center
+
+        button
+            width: fit-content
+
+        .explanation
+            border-left: 8px solid var.$main
+            padding: 64px
+            display: flex
+            gap: 64px
+
+            h2
+                text-align: center
+                align-self: center
+                span
+                    color: var.$main
+
+
+            .paragraphs
+                display: flex
+                flex-direction: column
+                gap: 16px
+                width: fit-content
+
+        .modules
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+
+            .module
+                display: flex
+                flex-direction: column
+                padding: 32px
+                width: 426px
+                height: 285px
+                background: rgba(black,.6)
+
+                span:nth-of-type(1)
+                    color: var.$main
+                    margin-bottom: 32px
+
+                span:nth-of-type(2)
+                    font-weight: 700
+                    font-size: 18px
+                    margin-bottom: 16px
+                    text-transform: uppercase
+
+
+
+
+                &:nth-child(5)
+                    background: linear-gradient(to bottom, transparent, rgba(var.$main,.5))
+                &:nth-child(6)
+                    background: linear-gradient(to bottom, transparent, rgba(#B174FF,.5))
+                    
+                &::before
+                    content: ''
+                    position: absolute
+                    transform: translate(-32px,-32px)
+                    border-width: 1px
+                    border-style: solid
+                    border-image: linear-gradient(to bottom, var.$main, rgba(0, 0, 0, 0)) 1 1%
+                    width: inherit
+                    height: inherit
+                    pointer-events: none
+
+                &::after
+                    content: ''
+                    width: 6px
+                    height: 6px
+                    background: var.$main
+                    position: absolute
+                    transform: translate(-32px - 2px,-32px - 2px)
+                    box-shadow: 0px 0px 10px 2px var.$main
+
+
+                img
+                    position: absolute
+                    transform: translate(-32px,-32px)
+                    width: inherit
+                    z-index: -9
+                    height: auto
+                    pointer-events: none
+
+
+@media screen and (max-width: 767px)
+    .solution
+        height: fit-content
+        .content
+            width: 100%
+            padding: 64px 0px
+            gap: 96px
+
+            .explanation
+                flex-direction: column
+                border: none
+                padding: 0px
+
+                h2
+                    padding: 16px 0px 16px 16px
+                    text-align: start
+                    width: 280px
+                    align-self: start
+                    border-left: 8px solid var.$main
+
+            .modules
+                flex-direction: column
+                align-items: center
+                .module
+                    width: 328px
+                    padding: 16px
+                    height: 220px
+
+
+                    span:nth-of-type(1)
+                        margin-bottom: 16px
+
+                    p
+                        font-size: 12px
+
+
+                    &::before
+                        transform: translate(-16px,-16px)
+                        
+
+                    &::after
+                        transform: translate(-16px - 2px,-16px - 2px)
+                    
+                    img
+                        transform: translate(-16px,-16px)
+                        height: auto
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+    .solution
+        height: fit-content
+        .content
+            padding: 64px 0px
+
+            .explanation
+                border: none
+                padding: 0px
+                gap: 16px
+                h2
+                    padding: 16px 0px 16px 16px
+                    border-left: 8px solid var.$main
+                    width: 100%
+                    text-align: start
+
+                    @media screen and (min-width: 1024px) and (max-width: 1279px)
+                        width: 60%
+
+
+                p
+                    width: 100%
+
+            .modules
+                justify-content: center

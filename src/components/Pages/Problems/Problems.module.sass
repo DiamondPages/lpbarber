@@ -1,0 +1,77 @@
+.problems
+    height: 1024px
+    display: flex
+    justify-content: center
+    .content
+        padding: 128px 0px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 96px
+        text-align: center
+
+        >p
+            width: 1024px
+            span
+                font-weight: 700
+            
+        .wrapper
+            display: flex
+            gap: 16px
+
+        
+            >div
+                display: flex
+                flex-direction: column
+                background: rgba(#1F1F1F,.3)
+                border-top: 4px solid #FF2121
+                padding: 32px
+                gap: 16px
+                align-items: center
+                width: 33%
+
+                span
+                    font-size: 18px
+                    font-weight: 700
+
+                img
+                    width: 32px
+                    height: auto
+
+
+
+@media screen and (max-width: 767px)
+    .problems
+        height: fit-content
+        .content
+            padding: 64px 0px
+            gap: 64px
+            
+            >p
+                width: 100%
+
+            .wrapper
+                flex-direction: column
+
+                >div
+                    width: 100%
+
+                    span
+                        font-size: 16px
+                    p
+                        font-size: 12px
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+    .problems
+        height: fit-content
+        .content
+            padding: 64px 0px
+            >p
+                width: 100%
+            .wrapper
+                flex-wrap: wrap
+                justify-content: center
+
+                >div
+                    width: 325px

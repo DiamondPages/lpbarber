@@ -1,0 +1,65 @@
+@use '../../../app/var'
+
+.faq
+    display: flex
+    justify-content: center
+    height: fit-content
+    .content
+        display: flex
+        flex-direction: column
+        gap: 96px
+        padding: 128px 0
+    
+
+        h2
+            text-align: start
+            border-left: 8px solid var.$main
+            padding: 64px
+
+        .faqContainer
+            display: flex
+            flex-direction: column
+            gap: 32px
+            >div
+                span
+                    background: rgba(#1F1F1F,.3)
+                    cursor: pointer
+                    display: flex
+                    justify-content: space-between
+                    padding: 16px 32px
+                    font-weight: 500
+
+                    img
+                        transition: all .3s
+
+                p
+                    padding: 16px 64px
+                    color: white
+                    font-weight: 300
+                    transition: all .3s
+
+
+@media screen and ( max-width: 767px )
+    .faq
+        .content
+            padding: 64px 0px
+            gap: 64px
+
+            h2
+                padding: 16px
+
+            .faqContainer
+                gap: 8px
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+    .faq
+        .content
+            h2
+                padding: 16px
+@media screen and (min-width: 1024px) and (max-width: 1279px)
+
+    .faq
+        .content
+            h2
+                padding: 32px

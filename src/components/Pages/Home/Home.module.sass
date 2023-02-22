@@ -1,0 +1,92 @@
+@use '../../../app/var'
+
+.home
+    height: 768px
+    display: flex
+    background-image: url('../../../assets/backgrounds/desktop/home.webp')
+    background-size: cover
+    background-position: center
+    width: 100vw
+    justify-content: center
+    @media screen and (max-width: 767px)
+
+    .logo
+        position: absolute
+        top: 100px
+        font-size: 32px
+        font-weight: 900
+        
+    .disclaimer
+        width: 45%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        h1
+            font-size: 36px
+
+            @media screen and (max-width: 767px)
+                font-size: 22px
+
+            
+            font-weight: 500
+            text-transform: uppercase
+            margin-bottom: 24px
+
+            span:nth-child(1)
+                font-weight: 700
+                
+            span:nth-child(2)
+                color: var.$main
+                font-weight: 800
+                font-size: 43px
+
+                @media screen and (max-width: 767px)
+                    font-size: 26.5px
+
+
+        p
+            font-size: 18px
+            margin-bottom: 42px
+
+        button
+            align-self: flex-start
+
+            @media screen and (max-width: 767px)
+                span
+                    width: 70%
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px)
+    .home
+        background-position: 55%
+        h1,p
+            filter: drop-shadow(0px 0px 10px rgba(black,.9))
+
+        .disclaimer
+            width: 560px
+
+
+
+
+@media screen and (max-width: 767px)
+    .home
+        height: 500px
+
+        .logo
+            top: 16px
+
+        .disclaimer
+            width: 100%
+            gap: 16px
+
+
+            h1
+                margin-bottom: 16px
+
+            p
+                margin-bottom: 16px
+
+
